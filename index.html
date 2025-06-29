@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(14, 14, 97);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+
+            border: 0;
+            background: #221f7b;
+            height: 1.2px;
+            margin: 60px 28px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+
+        .leftSection {
+            font-size: 3rem;
+            margin: 70px 0;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 121, 216);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(207, 219, 100);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 78vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: #0c0c0c;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+
+        }
+
+        /* -----------------contact--------------*/
+
+        /* 
+    body {
+      margin: 0;
+      background-color: #f9f9f9;
+    } */
+
+        .contact-section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #d4c8c8;
+        }
+
+        .contact-section p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-email {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .contact-email a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .contact-email a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sumit portfolio</div>
+            <div class="right"></div>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple"> Sumit</span>
+
+                <div>and I am a Web Developer</div>
+                <span id="element"></span>
+
+            </div>
+            <div class="rightSection">
+                <img src="dev.png" alt="">
+            </div>
+        </section>
+        <hr>
+
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Skill</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="HT.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste at, tempore doloribus non dicta
+                        soluta officiis perferendis blanditiis quae obcaecati repellat, mollitia magnam.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="JS.png" alt="">
+                    <div class="vertical-title">
+                        Node.js Developer (2012-2014)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste at, tempore doloribus non dicta
+                        soluta officiis perferendis blanditiis quae obcaecati repellat, mollitia magnam.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="jv.png" alt="">
+                    <div class="vertical-title">
+                        java Developer (2014-2016)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste at, tempore doloribus non dicta
+                        soluta officiis perferendis blanditiis quae obcaecati repellat, mollitia magnam.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="py.png" alt="">
+                    <div class="vertical-title">
+                        Python Developer (2016-2018)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste at, tempore doloribus non dicta
+                        soluta officiis perferendis blanditiis quae obcaecati repellat, mollitia magnam.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="fs.png" alt="">
+                    <div class="vertical-title">
+                        Full stack Developer (2018-2020)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste at, tempore doloribus non dicta
+                        soluta officiis perferendis blanditiis quae obcaecati repellat, mollitia magnam.
+                    </div>
+                </div>
+
+        </section>
+        <!-- contact section  -->
+        <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <p>Want to get in touch? Fill out the form below or send me an email.</p>
+
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-email">
+                Or email me at: <a href="mailto:your.email@example.com">deochesumit@gmail.com</a>
+            </div>
+        </section>
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Sumit Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            www.sumitsortfolio.com | All right reseved
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Designer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
